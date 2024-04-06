@@ -8,13 +8,13 @@ import { Firestore, getFirestore, doc, onSnapshot } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDHBrHwWNkGkWVG5Rl_ZT3OTu6ZwLgmbUA",
-  authDomain: "sage-tinder-clone.firebaseapp.com",
-  projectId: "sage-tinder-clone",
-  storageBucket: "sage-tinder-clone.appspot.com",
-  messagingSenderId: "802949845194",
-  appId: "1:802949845194:web:08da21f89f93324e05a433",
-  measurementId: "G-PNY0WK24SS"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
