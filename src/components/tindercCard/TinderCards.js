@@ -8,21 +8,32 @@ import {getFirestore, addDoc, collection, getDocs, onSnapshot, query} from "fire
 const TinderCards = () => {
   const [people, setPeople] = useState([])
 
-  const getCol = collection(db, 'people')
-  const queryCol = query(getCol)
 
+
+
+  // console.log(getCol)
 
   // fireStore Realtime update
-  const update = onSnapshot(queryCol, (snapshot) => {
-    const peoples = []
 
-    snapshot.forEach((doc) => {
-      peoples.push(doc.data())
+  useEffect(() => {
+    const getCol = collection(db, 'people')
+    const queryCol = query(getCol)
+
+    const update = onSnapshot(queryCol, (snapshot) => {
+      const peoples = []
+
+      snapshot.forEach((doc) => {
+        console.log(doc.data())
+        peoples.push(doc.data())
+      })
+      setPeople(peoples)
     })
-    setPeople(peoples)
-  })
 
-
+    return () => {
+      // this is to clean up
+      update()
+    }
+  },[])
   // {
   //   name:'steve jobs',
   //   url: 'img/stevejobs.jpg'
@@ -53,7 +64,6 @@ const TinderCards = () => {
 
   return (
     <div className='tinderCard'>
-      <h1>Tinder Cards</h1>
       <div className="tinderCard__cardContainer">
 
       {people.map((person) => (

@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import { Header, Home, Chat, TinderCards} from './exports';
+import { Header, Home, Chat, TinderCards, SwipeButtons} from './exports';
 
 function App() {
   return (
@@ -17,7 +17,12 @@ function App() {
           <Route path='/chat' element={<Chat/>}/>
 
 
-          <Route path='/' element={<TinderCards/>}/>
+          <Route path='/' element={
+          <>
+          <TinderCards/>
+          <SwipeButtons/>
+          </>
+        }/>
         </Routes>
       </Router>
       {/* Tinder Cards */}
