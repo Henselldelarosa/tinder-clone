@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import { Header, Home, Chats, TinderCards, SwipeButtons} from './exports';
+import { Header, Home, Chats, TinderCards, SwipeButtons, ChatScreen} from './exports';
 
 function App() {
   return (
@@ -12,6 +12,14 @@ function App() {
 
       <Router>
         <Routes>
+
+          <Route path='/chat/:person'
+          element={
+            <>
+              <Header backButton = '/chat'/>
+              <ChatScreen/>
+            </>
+          }/>
 
           <Route path='/chat'
           element={

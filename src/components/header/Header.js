@@ -21,7 +21,7 @@ const Header = ({backButton}) => {
       <Link to='/'>
         <IButton>
           <img
-          src="img/tinder-logo.svg"
+          src="/img/tinder-logo.svg"
           alt="tinder logo "
           className="header__logo"
           />

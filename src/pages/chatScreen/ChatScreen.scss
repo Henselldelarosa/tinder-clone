@@ -1,0 +1,62 @@
+.chatScreen{
+
+  &__matchDate{
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    text-transform: uppercase;
+  }
+
+  &__container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  &__messages{
+    display: flex;
+  }
+
+  &__img{
+
+  }
+
+  &__text{
+    margin-left: 10px;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 20px;
+
+    &--user{
+      margin-left: auto;
+      background-color: #29b3cd;
+      padding: 15px;
+      border-radius: 20px;
+    }
+  }
+
+  &__form{
+    display: flex;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid lightgray;
+  }
+
+  &__input{
+    flex: 1;
+    padding: 10px;
+    border: none;
+  }
+
+  &__button{
+    border: none;
+    margin: 20px;
+    background-color: white;
+    font-weight: bolder;
+    color: #fe3d71;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
