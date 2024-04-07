@@ -34,28 +34,7 @@ const TinderCards = () => {
       update()
     }
   },[])
-  // {
-  //   name:'steve jobs',
-  //   url: 'img/stevejobs.jpg'
-  // },
-  // {
-  //   name:'mark Zuckerberg',
-  //   url: 'img/mark-zuckerberg.jpg'
-  // },
 
-  // const db = getFirestore()
-
-
-  // const fetchData = async () => {
-  //   const querySnapshot = await getDocs(collection(db, "people"))
-  //   const temporaryArr =[]
-  //   querySnapshot.forEach((doc) => {
-  //     onSnapshot(getDoc(doc.data()))
-  //     temporaryArr.push(doc.data())
-
-  //   })
-  //   setPeople(temporaryArr)
-  // }
 
 
 

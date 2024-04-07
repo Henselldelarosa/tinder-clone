@@ -18,11 +18,11 @@ export {default as CloseIcon} from '@mui/icons-material/Close'
 export {default as StarRateIcon} from '@mui/icons-material/StarRate'
 export {default as FavoriteIcon} from '@mui/icons-material/Favorite'
 export {default as FlashOnIcon} from '@mui/icons-material/FlashOn'
-// export {default as } from '@mui/icons-material/'
+export {default as ArrowBackIcon} from '@mui/icons-material/ArrowBackIosNew'
 // export {default as } from '@mui/icons-material/'
 
 // pages
-export {default as Chat} from './pages/chat/Chat'
+export {default as Chats} from './pages/chats/Chats'
 export {default as Home} from './pages/home/Home'
 // export {default as } from './pages//'
 // export {default as } from './pages//'

@@ -4,21 +4,26 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import { Header, Home, Chat, TinderCards, SwipeButtons} from './exports';
+import { Header, Home, Chats, TinderCards, SwipeButtons} from './exports';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
 
       <Router>
         <Routes>
 
-          <Route path='/chat' element={<Chat/>}/>
-
+          <Route path='/chat'
+          element={
+            <>
+              <Header backButton = '/'/>
+              <Chats/>
+            </>
+          }/>
 
           <Route path='/' element={
           <>
+          <Header/>
           <TinderCards/>
           <SwipeButtons/>
           </>
