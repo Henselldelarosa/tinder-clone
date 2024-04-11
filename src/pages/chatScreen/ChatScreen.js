@@ -7,7 +7,6 @@ const ChatScreen = () => {
   const personName= person.slice(1)
 
   const [input, setInput] = useState('')
-  const [wantedMessages, setWantedMessages] = useState([])
 
   const updateInput = (e) => setInput(e.target.value)
 
@@ -47,34 +46,12 @@ const ChatScreen = () => {
     },
   ])
 
-  // let tempArr = []
-  // messages.map((message) => {
-  //   if(message.name === personName) tempArr.push(message)
-  // })
-
-  // console.log(tempArr)
-
-
-  console.log(messages)
   const handleSubmit = (e) => {
     e.preventDefault()
     setMessages([...messages, {message:input}])
     setInput('')
   }
 
-  // <di className='chatScreen__container'>
-        //   <Avatar
-        //   className='chatScreen__img'
-        //   src={message?.image}
-        //   alt={message?.name}
-        //   />
-        //   <p className='chatScreen__text'>{message.message}</p>
-        // </di>
-          // ):(
-          //   <di className='chatScreen__container'>
-          //     <p className='chatScreen__text--user'>{message.message}</p>
-          //   </di>
-          // )
   return (
     <div className='chatScreen'>
       <p className="chatScreen__matchDate">
@@ -101,73 +78,6 @@ const ChatScreen = () => {
         </di>)
         )
         })}
-      {/* {personName === } */}
-
-      {/* {messages.map((message) => {
-        message.name ? (
-
-          <>
-          {message?.name === personName && (
-            <div className='chatScreen__container'>
-          {console.log(message.name === personName)}
-          {console.log(message.image)}
-          <Avatar
-          className='chatScreen__img'
-          src={message?.image}
-          alt={message?.name}
-          />
-          <p className='chatScreen__text'>{message.message}</p>
-
-        </div>
-
-          )}
-          <></>
-          </>
-        ):(
-         <div className='chatScreen__container'>
-              <p className='chatScreen__text--user'>{message.message}</p>
-          </div>
-        )
-      })} */}
-
-
-      {/* {messages.map((message) => (
-        message.name && message.name === personName ? (
-        <di className='chatScreen__container'>
-          <Avatar
-          className='chatScreen__img'
-          src={message?.image}
-          alt={message?.name}
-          />
-          <p className='chatScreen__text'>{message.message}</p>
-
-        </di>
-
-
-          ):(
-            <></>
-          )
-
-        )
-
-        )} */}
-      {/* {messages.map((message) =>
-        message.name ? (
-
-          <di className='chatScreen__container'>
-          <Avatar
-          className='chatScreen__img'
-          src={message?.image}
-          alt={message?.name}
-          />
-          <p className='chatScreen__text'>{message.message}</p>
-        </di>
-          ):(
-            <di className='chatScreen__container'>
-              <p className='chatScreen__text--user'>{message.message}</p>
-            </di>
-          )
-      )} */}
 
         <form className="chatScreen__form">
           <input
@@ -187,15 +97,3 @@ const ChatScreen = () => {
 }
 
 export default ChatScreen
-      // {messages.map((message) => {
-
-      //   return(
-      //       message.name?(
-      //       message.name === personName && (
-      //     <div key={message.name}>
-
-      //     </div>
-      //         )
-      //   ):(<></>)
-      //   )
-      // })}

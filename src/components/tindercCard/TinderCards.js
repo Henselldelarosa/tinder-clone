@@ -8,13 +8,6 @@ import {getFirestore, addDoc, collection, getDocs, onSnapshot, query} from "fire
 const TinderCards = () => {
   const [people, setPeople] = useState([])
 
-
-
-
-  // console.log(getCol)
-
-  // fireStore Realtime update
-
   useEffect(() => {
     const getCol = collection(db, 'people')
     const queryCol = query(getCol)
@@ -23,7 +16,6 @@ const TinderCards = () => {
       const peoples = []
 
       snapshot.forEach((doc) => {
-        console.log(doc.data())
         peoples.push(doc.data())
       })
       setPeople(peoples)
