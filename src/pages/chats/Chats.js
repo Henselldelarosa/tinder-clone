@@ -5,7 +5,7 @@ const Chats = () => {
   return (
     <div>
       <Chat
-        name='Emely Osmet'
+        name='Emely'
         profilePic={'img/emely-osmet.jpg'}
         message= 'Hello'
         timeStamp ='5 minutes ago'

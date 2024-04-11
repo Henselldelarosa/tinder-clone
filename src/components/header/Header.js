@@ -3,13 +3,13 @@ import './Header.scss'
 import {Person, Forum, IButton, ArrowBackIcon} from '../../exports'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Header = ({backButton}) => {
+const Header = ({backButton, chat}) => {
   const navigate = useNavigate()
 
   return (
     <div className='header'>
       {backButton ? (
-        <IButton onClick={() => navigate('/')}>
+        <IButton onClick={() => navigate(chat? '/chat' :'/')}>
           <ArrowBackIcon className='header__icon' fontSize='large'/>
         </IButton>
       ):(

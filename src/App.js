@@ -16,7 +16,7 @@ function App() {
           <Route path='/chat/:person'
           element={
             <>
-              <Header backButton = '/chat'/>
+              <Header backButton = '/chat' chat/>
               <ChatScreen/>
             </>
           }/>
